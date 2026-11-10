@@ -1,0 +1,20 @@
+{
+  "title": "Free a rover high-centred on a rock without dragging or dropping it",
+  "category": "Impact on jobs",
+  "keywords": [
+    "bimanual",
+    "vehicle recovery",
+    "high-centred",
+    "unload before pulling",
+    "field robot"
+  ],
+  "instruction": "The rover is stuck on the rock. Get the rock out and set the rover back on its wheels where it stands.",
+  "context": "A vehicle high-centred on a rock (its chassis resting on it, its wheels hanging) is freed by taking its weight off the rock first: recovery crews jack or lift the vehicle, remove the obstacle, and lower the vehicle back onto its wheels (tow and recovery operators). Pulled from under the full weight, the rock drags the vehicle along, and once it is out the vehicle drops onto its wheels. Here one arm must hold the rover up by its rear tow bar while the other slides the rock out, then the rover is lowered gently; carrying it whole and setting it down gently is also allowed. Unlike TK-UUSVB7 (a beam jacked up and set on stands before reaching under it), the load is a vehicle on free wheels that moves when pulled, and the two hands work at once: one holds, one pulls.",
+  "setup": "Positions in cm from the midpoint between the two arm bases (61 cm apart), x forward, y to the robot's left; heights above the table. Track: an earth-brown sheet of painted PVC foil 0.6 mm thick, taped to the table from x 8 to 62, y -16 to 16. Rock: a grey block of painted pine, 5 x 14 x 5 cm (x, y, z), 0.30 kg (ballasted with steel shot), lying across the track under the rover's middle at (31, -3), from y +4 to -10, so that it sticks out 4 cm beyond the rover's right tyres. Rover: a 1:18 trail crawler (Traxxas TRX-4M with the Bronco body shell, decals removed, painted yellow with a white roof), 26.2 x 12.4 x 11.7 cm, 0.51 kg, tyres 5.6 cm across, driveshafts removed so each wheel rolls freely, shocks locked, its chassis resting on the rock and all four tyres 2.5 cm off the track, the midpoint between its axles at (31, 0), facing away from the robot. Tow bar: a dark grey 3D-printed PLA bar 4.8 x 1.6 x 2.0 cm bolted to the middle of the rear bumper's face, sticking out 4.6 cm.",
+  "scoring": "A drop: the lowest point of one of the rover's tyres falling more than 1 cm in one control step (0.2 m/s at 20 Hz) or more than 1.5 cm over three control steps (0.1 m/s sustained). 0 if at any time the rover drops, is carried more than 5 cm sideways (net) while its body rests on the rock (some point of the rock's top face within 4 mm of its body: dragged with it), rolls more than 30 degrees or pitches more than 45. Otherwise, at the end, with the rover and the rock at rest (each under 1 cm/s and 0.5 rad/s for the last 20 control steps, 1 s at 20 Hz) and released over those steps (none of six points on each arm, its wrist joint, palm, both fingertips, tool point and the point between the pad tips, and no point along the arm from its shoulder joint to its palm, within 5 cm of the rover or the rock), the rock wholly outside the rover's outline seen from above (bumper to bumper, tyre to tyre) and the rover within 10 degrees of level with all four tyres on the track (lowest point within 8 mm of it): 1.0 if the rover is within 2.5 cm and 5 degrees of where it stood; 0.5 otherwise. A full score ends the trial once it has held for 1 s.",
+  "run_limit": "2,400 steps (2 minutes at 20 Hz)",
+  "reset_notes": "Lay the rock back at its mark and set the rover on it, chassis on the rock, wheels hanging.",
+  "fidelity": "Rigid bodies at 240 Hz physics, 20 Hz control. The rover's base is one rigid body at the crawler's published size and mass; its wheels turn freely with a little drag (0.002 N m s/rad), as with the driveshafts removed; suspension rigid, as with the shocks locked. Friction: tyres 1.0, tow bar 1.0, rock 0.8, track 0.8, rover body 0.5. A drop is judged from the tyres' fall per control step; no impact forces are simulated.",
+  "scores": "Dream-1 run: 0.0 (both arms worked around and over the rover for the whole run without lifting it; the rock stayed under it); demo: 1.0",
+  "media": "M-QD9984"
+}
