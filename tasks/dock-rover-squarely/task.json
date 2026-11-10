@@ -1,0 +1,20 @@
+{
+  "title": "Square a fixed-wheel rover up before pushing it onto its charging dock",
+  "category": "Impact on jobs",
+  "keywords": [
+    "bimanual",
+    "fixed wheels",
+    "docking",
+    "vehicle handling",
+    "field robot"
+  ],
+  "instruction": "Put the rover on its charging dock.",
+  "context": "A vehicle whose wheels cannot steer goes only where its wheels point. Pushed toward a dock from an angle, it runs wide of it, and this dock has no guides to correct it. Here the rover's front axle is on the dock's centreline but the rover is turned 12 degrees: pushed in as it stands it reaches the dock about 4 cm off centre and still turned, and scores 0. The scoring asks only for the end state, so any way of bringing the rover square before it reaches the dock counts: lifting the tail and swinging it about the front axle (the demo), shoving the tail across, or lifting the rover whole. Unlike TK-XWRNG2 (a tow cart steered into its bay by its drawbar), the rover has no handle to steer it.",
+  "setup": "Positions in cm from the midpoint between the two arm bases (61 cm apart), x forward, y to the robot's left; heights above the table. Track: an earth-brown sheet of painted PVC foil 0.6 mm thick, taped to the table from x 8 to 70, y -16 to 16. Dock: a grey ABS block 3 x 16 x 7 cm (x, y, z) screwed to the table with its face at x 60, centred on y 0, with two orange contact pads 1.4 x 1.4 cm, 6 mm proud of its face, at y -3 and +3, 4.5 cm up. Rover: a 1:18 trail crawler (Traxxas TRX-4M, body painted yellow with a white roof), 26.2 x 12.4 x 11.7 cm, 0.51 kg, tyres 5.6 cm across, driveshafts removed so its wheels roll freely, steering fixed straight; its front axle at (40.6, 0) on the dock's centreline, its front bumper's centre 13.5 cm short of the pads (its leading corner 12.6 cm), the rover turned 12 degrees anticlockwise (seen from above) from the dock's axis. Tow bar: a dark grey 3D-printed PLA bar 4.8 x 1.6 x 2.0 cm bolted to the middle of the rear bumper's face.",
+  "scoring": "0 if at any time the rover tilts more than 30 degrees. Otherwise, at the end, with the rover at rest (under 5 mm/s and 0.5 rad/s for the last 20 control steps, 1 s at 20 Hz), released (none of six points on each arm, its wrist joint, palm, both fingertips, tool point and the point between the pad tips, and no point along the arm from its shoulder joint to its palm, within 5 cm of the rover's body) and all four tyres on the track (lowest point within 8 mm of it): 1.0 if docked, that is both front corners of the front bumper within 3 mm of the contact pads' face, the rover's heading within 2 degrees of the dock's axis and the bumper's centre within 8 mm of the dock's centreline; otherwise 0. A full score ends the trial once it has held for 1 s.",
+  "run_limit": "1,200 steps (1 minute at 20 Hz)",
+  "reset_notes": "Set the rover back on its marks: front axle on the centreline mark, turned to the 12 degree line.",
+  "fidelity": "Rigid bodies at 240 Hz physics, 20 Hz control. The rover's base is one rigid body at the crawler's published size and mass; its four wheels turn freely on revolute joints with a little drag (0.002 N m s/rad), as with the driveshafts removed, and they do not steer, as with the steering fixed straight; its suspension is rigid. Friction: tyres 1.0, track 0.8, dock plate 0.6, pads 0.8, tow bar 1.0. Contact with the pads is judged geometrically; no electrical contact is simulated.",
+  "scores": "Dream-1 run: 0.0 (the right arm reached over the rover's bonnet; the rover stayed where it stood, turned off the dock's axis); demo: 1.0",
+  "media": "M-2K8HUT"
+}
