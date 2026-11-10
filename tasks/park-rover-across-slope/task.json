@@ -1,0 +1,20 @@
+{
+  "title": "Park a free-rolling rover across a slope before taking its stop block away",
+  "category": "Impact on jobs",
+  "keywords": [
+    "bimanual",
+    "slope",
+    "rolling vehicle",
+    "parking",
+    "field robot"
+  ],
+  "instruction": "Take the stop block away from the rover's wheel and leave the rover parked on the slope.",
+  "context": "A vehicle with free wheels left on a slope rolls away along its wheels unless it stands across the fall line, its wheels square to the slope; a disabled vehicle or a trailer is turned across the grade before it is released. Here a free-rolling rover rests nose uphill on a 10 degree board, held by a stop block behind one front wheel, and there are no chocks: taken away as it stands, the rover rolls off. The rover must be held while the block is taken away, then turned square across the slope: within about 1.1 degrees, or it creeps away faster than 1.7 mm/s, which the scoring counts as not parked. Unlike TK-T9FLAS (rolls of felt laid on two roof faces so neither rolls off) and #227 (chock a rolling cradle before removing its load), the load is a vehicle turned about its own wheels while held.",
+  "setup": "Positions in cm from the midpoint between the two arm bases (61 cm apart), x forward, y to the robot's left; heights above the table. Slope: a fixed plywood board 40 x 40 x 2 cm, top painted earth brown, set at 10 degrees on a pine wedge frame clamped to the table, its lower edge on the table at x 16, rising away from the robot. Rover: a 1:18 trail crawler (Traxxas TRX-4M, body painted yellow with a white roof), 26.2 x 12.4 x 11.7 cm, 0.51 kg, tyres 5.6 cm across, driveshafts removed so its wheels roll freely, on the slope nose uphill, its origin 17 cm up the slope from the lower edge, centred on y 0. Tow bar: a dark grey 3D-printed PLA bar 4.8 x 1.6 x 2.0 cm bolted to the middle of the rear bumper's face. Stop block: a red rubber-soled aluminium block 3 x 8 x 3 cm, 0.19 kg, on the slope against the downhill side of the left front tyre, reaching out past the rover's side.",
+  "scoring": "0 if at any time the lowest point of a tyre leaves the board's outline (the rover rolled off). Otherwise, at the end: the rover still (its origin moving less than 5 mm over the last 3 s, 60 control steps at 20 Hz, a creep under 1.7 mm/s; the rover and the stop block turning under 0.5 rad/s and the block under 1 cm/s) and released over those 3 s (none of six points on each arm, its wrist joint, palm, both fingertips, tool point and the point between the pad tips, and no point along the arm from its shoulder joint to its palm, within 5 cm of the rover or the stop block): 1.0 if all four tyres rest on the board (lowest point within 8 mm of its surface, inside its outline) and every point of the stop block's surface is at least 3 cm from the rover (tyres, body and tow bar); otherwise 0. A full score ends the trial once it has held for 1 s.",
+  "run_limit": "1,200 steps (1 minute at 20 Hz)",
+  "reset_notes": "Hold the rover on its mark on the slope, nose uphill, set the stop block against its left front tyre, let go.",
+  "fidelity": "Rigid bodies, 240 Hz physics, 20 Hz control. The rover base is one rigid body at the crawler's published size and mass; wheels roll freely with 0.002 N m s/rad drag and no static friction (driveshafts removed), so off the contour it creeps (within 1.1 degrees, under 1.7 mm/s); real bearings hold a little. Suspension rigid; tyre size and centre of mass are estimates. Stop block: rubber-soled aluminium (friction 0.9). Rolling is judged from positions. No forces or damage are simulated.",
+  "scores": "Dream-1 run: 0.0 (the left arm reached to the stop block and stayed beside it; the block was never taken away and the rover stood where it was); demo: 1.0",
+  "media": "M-V464AB"
+}
