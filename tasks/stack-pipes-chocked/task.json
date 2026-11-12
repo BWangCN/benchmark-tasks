@@ -1,0 +1,21 @@
+{
+  "title": "Stack three smooth pipes on a narrow pad with the bottom pair chocked first",
+  "category": "Impact on jobs",
+  "keywords": [
+    "bimanual",
+    "stacking",
+    "pipes",
+    "chocking",
+    "rolling",
+    "order of work"
+  ],
+  "instruction": "Stack the three pipes on the pad, lengthwise along it.",
+  "context": "Pipe and other cylindrical stock is stacked and blocked so that it cannot spread (OSHA 29 CFR 1926.250(b)(6)), and plastic pipe makers ask for each row to be blocked. Three equal pipes in a pyramid spread on their own whenever the friction between them is below 2 - sqrt(3) = 0.27, as between greased steel pipes (0.11 to 0.16 in published tables). These pipes lie loose beside a pad 12 cm wide. Two bottom pipes stand alone, so nothing looks wrong until the top pipe is set on them and drives them apart: the bottom pair must be held or chocked before the top pipe is let go. Unlike #430 (a ball pyramid held in by a tray's fixed rim), here the stops are not there until the robot lays them. Unlike #1005 (a car chocked before it is jacked), #227 or #928 (a cradle chocked before its load is changed), here nothing rolls until the stack is loaded: the rolling to stop is the load's own wedging. It is not lock-before-loading either: the load itself drives its support apart.",
+  "setup": "Positions in cm from the midpoint between the two arm bases (61 cm apart), x forward, y to the robot's left; heights above the table. An earth-brown sheet of painted PVC foil 0.6 mm thick from x 10 to 44, y -45 to 45; on it a grey pad 2 mm thick from x 14 to 36, y -6 to 6 (12 cm wide; three 5 cm pipes side by side, 15 cm, would overhang it). Three short steel pipe sections, greased, 5 cm across and 12 cm long, 0.25 kg each, lying with their axes along x at (22, -22), (22, -31) and (22, -40). Two chocks: steel blocks 12 x 4 x 4 cm (1.5 kg) with rubber soles, lying along x at (20, 20) and (20, 29). Friction: pipe on pipe 0.15, pipe on pad 0.33, chock on pad 0.7.",
+  "scoring": "At the end, after 2 s with the three pipes at rest (no pipe's centre moved more than 2 mm over the last 2 s) and released (no point of either gripper, and no point along either arm from its shoulder joint to its palm, within 5 cm of any pipe): 1.0 the three pipes' axes wholly inside the pad's outline, two lying on the pad (axis 2.5 cm above it, within 4 mm) and the third resting on both (all three lying along x, within about 18 degrees; its axis between theirs along y, at least 4 cm above the pad, within 5.3 cm of each of theirs so that it touches both, its middle within 6 cm of theirs along x, and no chock within 3 mm under it along its length: it rests on the pipes, not on a chock); 0.25 two pipes lying on the pad (lying along x, within about 18 degrees, their axes inside the pad's outline and 2.5 cm above it, within 4 mm) and no full pyramid; 0 otherwise. A full score ends the trial once it has held for 1 s.",
+  "run_limit": "2,600 steps (130 s at 20 Hz)",
+  "reset_notes": "Lay the three pipes and the two chocks back on their marks beside the pad.",
+  "fidelity": "Rigid bodies, 240 Hz physics, 20 Hz control. The pipes are solid cylinders with a thin-walled pipe's mass; the simulator has no rolling resistance, so a stacked pipe can keep turning in place and the rest test reads positions. The pyramid's spreading threshold (0.27) is the statics of equal cylinders; in the simulator a pyramid set down also spreads at 0.35, so rougher pipes are not tested. The chocks' 0.9 is applied to all their faces, so a pipe on a chock is at 0.53.",
+  "scores": "Dream-1 run: 0.0 (the arms went to the pipes and the chocks but stacked nothing); demo: 1.0",
+  "media": "M-BVN4XY"
+}
