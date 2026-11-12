@@ -1,0 +1,21 @@
+{
+  "title": "Find by touch and take out the one prop under a slab that carries nothing",
+  "category": "Impact on jobs",
+  "keywords": [
+    "bimanual",
+    "cribbing",
+    "shoring",
+    "load path",
+    "probing by touch",
+    "rubble"
+  ],
+  "instruction": "Take out the prop that carries nothing and put it on the pad. Leave the slab as it is.",
+  "context": "Crews who crib a load keep checking that every crib stays tight (USACE US&R Shoring Operations Guide, 2021; Fire Engineering, \"Timber cribbing use\"): a loose crib carries nothing. Here a concrete slab stands on four props; one is 2 mm short, so the slab rests on the other three; the gap is under the slab's edge, and where the slab's weight lies does not show. A carrying prop is pinned by its share of the slab's weight and drags the slab when pulled; the spare one slides at a touch. The corner changes every trial: the spare is found by nudging each prop. Unlike #743 (a short foot showing a 5 mm gap, the same foot every trial), #1148, #1221 (marked) or #952 (the loaded block visibly props the hatch), here the slab stands steady on three, a press that rocks it 1 mm counts as a fault, and the 2 mm gap is hard to see. Unlike #43, #63 or #75 (the odd one found by weighing or shaking it), the test must not disturb what the props carry. Done by: rescue technicians.",
+  "setup": "Positions in cm from the midpoint between the two arm bases (61 cm apart), x forward, y to the robot's left; heights above the table. An earth-brown sheet 34 x 90 cm, x 10 to 44. A grey pad 8 x 14 cm, 2 mm thick, at x 13 to 21, y -7 to 7. A concrete slab 14 cm (x) by 24 cm (y), 2 cm thick, 3.1 kg with a lead plate cast into it, centred at (28, 0), its underside 4 cm up; its centre of mass lies 1.2 cm (x) and 2.2 cm (y) from its middle, away from the short prop's corner, inside the triangle of the other three props; the slab is turned to suit and looks the same any way round. Four concrete props 4 cm (x) by 10 cm (y), 0.38 kg each, one under each corner: centres at x 23.5 and 32.5, y -12 and 12, so that half of each lies under the slab's end and half sticks out past it. Three are 4 cm tall; one, at a corner drawn at random each trial, is 3.8 cm tall and carries nothing. Friction 0.8 static, 0.7 dynamic on all faces.",
+  "scoring": "0 if at any time a corner of the slab's underside moves more than 1 mm up or down from its height on the props, or the slab's middle moves more than 3 mm along the ground. Otherwise, at the end, after 2 s with the short prop and the slab at rest (their middles moved under 2 mm over the last 2 s) and released (no point of either gripper, and no point along either arm from its shoulder joint to its palm, within 5 cm of either): 1.0 the short prop on the pad (every corner over the pad, its lowest corner within 5 mm of the pad's top); 0.5 the short prop out from under the slab (no corner of it, and not its middle, inside the slab's outline seen from above); 0 otherwise. A full score ends the trial once it has held for 1 s.",
+  "run_limit": "2,400 steps (120 s at 20 Hz)",
+  "reset_notes": "Put the four props back under the slab's corners with the short one at a new corner, and the slab back on them turned so that its heavy end lies away from the short prop.",
+  "fidelity": "Rigid bodies, 240 Hz physics, 20 Hz control. Concrete friction 0.8 static, 0.7 dynamic on every face. The short prop's 2 mm gap is a bench-scale stand-in for a loose crib; a real one may be loose by a fraction of a millimetre and found the same way. The nudge in the demo is a fixed hand offset (5 mm into the prop) held 1.5 s, not a measured force. The slab's off-centre weight is a set centre of mass.",
+  "scores": "Dream-1 run: 0.0 (2,400 steps); demo: 1.0 (four runs, the short prop at each corner)",
+  "media": "M-XVGSA3"
+}
