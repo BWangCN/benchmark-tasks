@@ -1,0 +1,21 @@
+{
+  "title": "Get a slab off a free-wheeled rover without moving the rover",
+  "category": "Impact on jobs",
+  "keywords": [
+    "bimanual",
+    "pushing",
+    "friction",
+    "rolling",
+    "rover",
+    "rubble"
+  ],
+  "instruction": "Get the slab off the rover and onto the ground without lifting it. The rover must stay where it is.",
+  "context": "Crews clearing debris off something on wheels must keep it from rolling; they slide such loads rather than lift them. Here a 14 kg rover on free-rolling wheels stands on a track with a 0.8 kg slab lying flat on its roof. The slab's friction on the roof (about 5 N) is more than what the wheels resist along the track (about 3 N to start all four rolling): the obvious push, straight away from the robot, runs along the rover and carries the rover with it. Across the wheels the tyres hold (they do not slide sideways): a push sideways slides the slab off. Unlike #1310 (a load braced while the sheet under it is pulled), here what lies underneath is on wheels: pushing across needs no bracing at all, and pushing along unbraced moves the rover. Unlike #1541 (a rover turned across a slope to park it), here the vehicle may not move: the push's direction is the skill. Done by: rescue technicians.",
+  "setup": "Positions in cm from the midpoint between the two arm bases (61 cm apart), x forward, y to the robot's left; heights above the table. An earth track 40 x 80 cm, x 10 to 50, y -40 to 40, friction 0.8. A loaded rover (a 1:18 crawler body ballasted with lead to 14 kg), 26.2 cm long (about 36 cm over a 5 cm tow tab with a post at each end), 12.4 cm wide over the tyres, 11.7 cm tall at the roof, front wheels steered (a red steering pin stands 11.2 cm up), wheels free to roll (about 0.7 N at each tyre to start it); it faces away from the robot (+x), its origin (on the ground between the axles) at (28, -5). A concrete-faced slab 20 cm along the rover by 10 cm across, 1.5 cm thick, 0.8 kg, lies on its roof centred over the origin, overhanging the roof (the cab top, 11 x 9.2 cm) by 3 cm at the rear, 6 cm at the front and 4 mm at each side.",
+  "scoring": "0 if at any time the rover's origin (on the ground between its axles) moves more than 3 cm from its start along the ground, or the slab is lifted, not slid: its lowest point more than 5 mm above the rover's roof, or its middle more than 5 mm above where it lay. Otherwise, at the end, after 2 s with the rover and the slab at rest (the rover's origin and the slab's middle moved under 2 mm over the last 2 s) and released (no point of either gripper, and no point along either arm from its shoulder joint to its palm, within 5 cm of the rover, its wheels and steering, or of the slab): 1.0 the slab on the ground (its lowest point within 5 mm of it) and clear of the rover (not touching it: no point within 2 mm of its body, wheels or steering); 0.5 the slab's middle off the rover's 26.2 x 12.4 cm footprint (tow tabs excluded) seen from above, but the slab not lying clear on the ground; 0 otherwise. A full score ends the trial once it has held for 1 s.",
+  "run_limit": "2,400 steps (120 s at 20 Hz)",
+  "reset_notes": "Stand the rover on its mark facing +x (away from the robot) and lay the slab on its roof, centred over the rover's middle between the axles.",
+  "fidelity": "Rigid bodies, 240 Hz physics, 20 Hz control. Friction 0.8 on the track and slab (face values averaged); tyres 1.0. Wheels roll freely with a 0.02 N m breakaway torque for bearing drag. The slab's 0.8 kg is what the simulated arm can slide (1.5 kg did not move). Front tyres are sphere colliders reaching 1.7 cm past the real tyres. Bracing and pushing along scores if it works; the simulated tab grip is weak.",
+  "scores": "Dream-1 run: 0.0 (2,400 steps); demo: 1.0",
+  "media": "M-KRKLMJ"
+}
